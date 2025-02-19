@@ -1,36 +1,21 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FeatureSec from './Component/FeatureSec'
-import Navbar from './Component/Navbar'
-import HeroSection from './Component/HeroSection'
-import WorkFlow from './Component/WorkFlow'
-import Pricing from './Component/Pricing'
-import Testimonials from './Component/Testimonials'
-import Footer from './Component/Footer'
-// import LoginPage from './pages/Login.jsx'
+import HomePage from './Component/Pages/Homepage';
+import LoginPage from './Component/Pages/Login';
+import CreateAccountPage from './Component/Pages/CreateAccountPage';
+import Portfolio from './Component/Pages/Portfolio';
 
-const App = () => {
+function App() {
   return (
-      <>
-      <Navbar/>
-        <div className="max-w-7xl mx-auto pt-20 px-6">
-        <HeroSection/>
-        <FeatureSec/>
-        <WorkFlow/>
-        <Pricing/>
-        <Testimonials/>
-        <Footer/>
-        </div>
-        <Router>
+    <Router>
       <Routes>
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/create-account" element={<CreateAccountPage />} /> */}
-        {/* Other routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/create-account" element={<CreateAccountPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+
       </Routes>
     </Router>
-    </>
-    
-  )
+  );
 }
-
 export default App;

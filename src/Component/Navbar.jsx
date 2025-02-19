@@ -1,7 +1,8 @@
-import { Menu, X } from "lucide-react";
+ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
-import { navItems } from "../constants";
+// import { navItems } from "../constants";
+import { Link } from "react-router-dom"
  
 
 const Navbar = () => {
@@ -16,26 +17,33 @@ const Navbar = () => {
     <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-          <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
+          <img className="h-10 w-10" src={logo} alt="Logo" />
           <span className="text-xl tracking-tight">Pitchers</span>
            </div>
-           <ul className="hidden lg:flex ml-14 space-x-12">
+           {/* <ul className="hidden lg:flex ml-14 space-x-12">
            {navItems.map((item, index) => (
               <li key={index}>
                 <a href={item.href}>{item.label}</a>
               </li>
            ))}
-           </ul>
-           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+           </ul> */}
+           <div className="hidden lg:flex justify-center space-x-5 items-center">
+           <Link to="/" className="py-2 px-3 border rounded-md">
+              Home
+            </Link>
+            <Link to="/login" className="py-2 px-3 border rounded-md">
               Log In
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link to ="/create-account"
               className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
             >
               Create an account
-            </a>
+            </Link>
+            <Link to ="/portfolio"
+              className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
+            >
+              View Portfolio
+            </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -45,13 +53,13 @@ const Navbar = () => {
         </div>
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-             <ul>
+             {/* <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <div className="flex space-x-6">
               <a href="#" className="py-2 px-3 border rounded-md">
                 Log In
