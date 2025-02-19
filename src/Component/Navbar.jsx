@@ -61,6 +61,9 @@ const Navbar = () => {
               ))}
             </ul> */}
             <div className="flex space-x-6">
+            <Link to="/" className="py-2 px-3 border rounded-md">
+              Home
+            </Link>
               <a href="#" className="py-2 px-3 border rounded-md">
                 Log In
               </a>
@@ -70,6 +73,11 @@ const Navbar = () => {
               >
                 Create an account
               </a>
+              <Link to ="/portfolio"
+              className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
+            >
+              View Portfolio
+            </Link>
             </div>
           </div>
         )}
