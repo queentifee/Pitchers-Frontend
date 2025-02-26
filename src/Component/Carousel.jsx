@@ -4,64 +4,33 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css"
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import one from "../assets/one.png"
-import two from "../assets/two.png"
-import three from "../assets/three.png"
-import four from "../assets/four.png"
-import five from "../assets/five.png"
-import six from "../assets/six.png"
-import seven from "../assets/seven.png"
-import eight from "../assets/eight.png"
-import nine from "../assets/nine.png"
-
-
-
-
-
-
+import mockupOne from '../assets/mockups/mockup1.png'
+import mockupTwo from '../assets/mockups/mockup2.png'
+import mockupThree from '../assets/mockups/mockup3.png'
+import mockupFour from '../assets/mockups/mockup4.png'
+import mockupFive from '../assets/mockups/mockup5.png'
+import mockupSix from '../assets/mockups/mockup6.png'
+import mockupSeven from '../assets/mockups/mockup7.png'
+import mockupEight from '../assets/mockups/mockup8.png'
+import mockupNine from '../assets/mockups/mockup9.png'
 
 
 const images = [
-    {
-        src: one,
-        // text: "Start your day right with a hearty breakfast to fuel your day ahead.",
-      },
-      {
-        src: two,
-        // text: "Experiment with new recipes to spice up your mealtime routine.",
-      },
-      {
-        src: three,
-        
-        // text: "A balanced meal is the key to feeling healthy, satisfied and energized.",
-      },
-      {
-        src: four,
-        // text: "Portion control is important. Listen to your body's fullness cues.",
-      },
-      {
-        src: five,
-        // text: "Slow down and savor each bite for an enjoyable dining experience.",
-      },
-      {
-        src: six,
-      },
-      {
-        src: seven,
-      },
-      {
-        src: eight,
-      },
-      {
-        src: nine,
-      },
-    ];
+  { src: mockupOne },
+  { src: mockupTwo },
+  { src: mockupThree },
+  { src: mockupFour },
+  { src: mockupFive },
+  { src: mockupSix },
+  { src: mockupSeven },
+  { src: mockupEight },
+  { src: mockupNine },
+];
     
     const Carousel = () => {
       return (
         <div className="relative mx-auto px-6 lg:px-20 py-2 min-h-[500px]">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left Section - 60% */}
             <div className="w-full ">
               <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -70,11 +39,11 @@ const images = [
                 autoplay={{ delay: 3000 }}
                 loop={true}
                 spaceBetween={20}
-                slidesPerView={1}
+                slidesPerView={2}
                 breakpoints={{
                   640: { slidesPerView: 1 },
-                  768: { slidesPerView: 1 },
-                  1024: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 2 },
                 }}
                 className="w-full"
               >

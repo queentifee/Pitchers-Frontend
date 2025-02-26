@@ -31,18 +31,22 @@ const Navbar = () => {
            <Link to="/" className="py-2 px-3 border rounded-md">
               Home
             </Link>
-            <Link to="/login" className="py-2 px-3 border rounded-md">
+            <Link to="/" className="py-2 px-3 border rounded-md">
               Log In
             </Link>
-            <Link to ="/create-account"
-              className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
+            <Link to ="/"
+className="py-2 px-3 border rounded-md"            >
+              Create account
+            </Link>
+            <Link to="/about"       
+             className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
             >
-              Create an account
+              About Us
             </Link>
             <Link to ="/portfolio"
               className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
             >
-              View Portfolio
+            Portfolio
             </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">

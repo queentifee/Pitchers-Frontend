@@ -3,6 +3,8 @@ import Navbar from '../Navbar';
 import HeroPortfolio from '../HeroPortfolio';
 import Clients from '../Clients';
 import DisplaySection from '../Display';
+import DisplaySec from '../DisplaySec';
+import FlexDisplay from '../FlexDisplay';
 import Carousel from '../Carousel';
 import Footer from '../Footer';
 
@@ -14,6 +16,9 @@ function Portfolio() {
           <HeroPortfolio />
           <Clients/>
           <DisplaySection/>
+          <FlexDisplay/>
+          <DisplaySec/>
+
           <Carousel/>
           <Footer/>
 </div>

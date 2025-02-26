@@ -95,6 +95,40 @@ export const features = [
   },
 ];
 
+export const feature = [
+  {
+    icon: <BotMessageSquare />,
+    text: "Custom Software Development",
+    description:
+    "From sleek landing pages to complex web applications, we create responsive and engaging websites"  },
+  {
+    icon: <ServerCog/>,
+    text: "Web Development",
+    description:
+    "We design and develop stunning websites that provide an engaging user experience."  },
+  {
+    icon: <Smartphone/>,
+    text: "Mobile App Development",
+    description:
+    "We build intuitive and scalable iOS & Android applications tailored to your audience" },
+     {
+    icon: <BatteryCharging />,
+    text: "UI/UX Design",
+    description:
+    "Our design-first approach ensures intuitive and aesthetically pleasing digital experiences."  },
+  {
+    icon: <Building/>,
+    text: "Cloud Services",
+    description:
+    "Secure and scalable cloud-based applications to ensure seamless business operations." },
+  {
+    icon: <GlobeLock />,
+    text: "Quality Assurance and Testing",
+    description:
+      "Our rigorous quality assurance and testing processes ensure that your software performs flawlessly.",
+  },
+];
+
 export const checklistItems = [
   {
     title: "Discovery & Consultation",
@@ -121,6 +155,25 @@ export const checklistItems = [
     description:
       "Going Live with Confidence: Once everything is tested and approved, we deploy the software to the live environment.",
   },
+];
+export const choose = [
+  {
+    title: "Client-Centric Approach ",
+    description:
+    'We prioritize your business goals and provide customized solutions.'  },
+  {
+    title: "Agile Development ",
+    description:
+    'Fast, iterative development to ensure quick delivery and continuous improvements.'  },
+  {
+    title: "Cutting-Edge Technology",
+    description:
+    'We stay ahead with the latest tech trends to build future-proof software.'  },
+  {
+    title: " 24/7 Support & Maintenance",
+    description:
+    'Our support team ensures that your software runs smoothly at all times.'  },
+   
 ];
 
 export const pricingOptions = [

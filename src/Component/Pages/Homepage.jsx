@@ -16,7 +16,7 @@ function HomePage() {
           <HeroSection />
           <FeatureSec />
           <WorkFlow />
-          <Pricing />
+          {/* <Pricing /> */}
           <Testimonials />
           <Footer />
         </div>
