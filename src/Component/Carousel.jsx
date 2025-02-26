@@ -29,17 +29,15 @@ const images = [
     
     const Carousel = () => {
       return (
-        <div className="relative mx-auto px-6 lg:px-20 py-2 min-h-[500px]">
-          <div className="flex flex-col lg:flex-row gap-8">
+        <div className="relative mx-auto px-6 lg:px-20 py-2 mb-5 h-auto">
+          <div className="flex flex-col lg:flex-row gap-10">
             <div className="w-full ">
               <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                // navigation
-                // pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
                 loop={true}
                 spaceBetween={20}
-                slidesPerView={2}
+                slidesPerView={1}
                 breakpoints={{
                   640: { slidesPerView: 1 },
                   768: { slidesPerView: 2 },
@@ -49,7 +47,7 @@ const images = [
               >
                 {images.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative overflow-hidden rounded-lg shadow-md">
+                    <div className="relative overflow-hidden rounded-lg shadow-md  h-[300px] sm:h-[400px] lg:h-[400px]">
                       <img
                         src={item.src}
                         alt={`image ${index + 1}`}

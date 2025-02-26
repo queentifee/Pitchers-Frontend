@@ -3,7 +3,7 @@ import word from "../assets/word.jpg";
 
 const LogoSection = () => {
   return (
-    <div       className="relative  h-[400px] flex justify-center items-center mt-30"
+    <div       className="relative  h-[400px] flex justify-center items-center mt-10"
 >
       {/* Background Image */}
       <div

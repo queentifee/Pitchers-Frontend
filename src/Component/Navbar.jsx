@@ -56,38 +56,45 @@ className="py-2 px-3 border rounded-md"            >
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-             {/* <ul>
-              {navItems.map((item, index) => (
-                <li key={index} className="py-4">
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul> */}
-            <div className="flex space-x-6">
-            <Link to="/" className="py-2 px-3 border rounded-md">
-              Home
-            </Link>
-              <a href="#" className="py-2 px-3 border rounded-md">
-                Log In
-              </a>
-              <a
-                href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-green-500 to-orange-800"
-              >
-                Create an account
-              </a>
-              <Link to="/about"       
-             className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
-            >
-              About Us
-            </Link>
-              <Link to ="/portfolio"
-              className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
-            >
-               Portfolio
-            </Link>
-            </div>
+  <div className="fixed inset-0 z-50 bg-neutral-900 bg-opacity-85 flex flex-col justify-center items-center h-screen w-full lg:hidden transition-opacity duration-300 ease-in-out opacity-100 scale-100">
+    
+    {/* Navigation Links */}
+    <div className="flex flex-col space-y-5 text-center">
+      <Link to="/" className="py-3 px-6 text-white text-lg border rounded-md">
+        Home
+      </Link>
+      
+      <a href="#" className="py-3 px-6 text-white text-lg border rounded-md">
+        Log In
+      </a>
+
+      <a
+        href="#"
+        className="py-3 px-6 text-lg font-semibold rounded-md bg-gradient-to-r from-green-500 to-orange-800 text-white"
+      >
+        Create an Account
+      </a>
+
+      <Link
+        to="/about"
+        className="py-3 px-6 text-lg font-semibold bg-gradient-to-r from-green-500 to-orange-800 text-white rounded-md"
+      >
+        About Us
+      </Link>
+
+      <Link
+        to="/portfolio"
+        className="py-3 px-6 text-lg font-semibold bg-gradient-to-r from-green-500 to-orange-800 text-white rounded-md"
+      >
+        Portfolio
+      </Link>
+    </div>
+ <button
+      onClick={() => setMobileDrawerOpen(false)}
+      className="absolute top-6 right-6 text-white text-3xl"
+    >
+      ✕
+    </button>
           </div>
         )}
       </div>

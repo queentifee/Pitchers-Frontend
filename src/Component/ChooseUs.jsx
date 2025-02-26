@@ -26,7 +26,7 @@ const ChooseUs = () => {
             </div>
           ))}
         </div>
-        <div className=" w-full lg:w-1/2 ">
+        <div className=" w-full lg:w-1/2 hidden lg:block ">
         <img src={sidee} alt="Why Choose Us" className="w-full h-[500px]  mt-10 rounded-lg shadow-lg object-cover" />
         </div> 
       </div>

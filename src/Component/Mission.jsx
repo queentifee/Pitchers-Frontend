@@ -4,16 +4,14 @@ import mission from "../assets/mission.jpg"
     
     const Mission = () => {
       return (
-        <div className="w-full px-0 lg:px-0 py-10 ">
-        <div className="flex flex-col lg:flex-row mt-20 items-center gap-12">
+        <div className="w-full px-0 lg:px-0 py-10">
+        <div className="flex flex-col md:flex-row mt-20 items-center gap-12">
           
-            {/* Left Section - 60% */}
-            {/* <div className="w-full lg:w-[60%]"> */}
-            <div className="w-full lg:w-[70%]">
-
+          {/* Left Section - 70% */}
+          <div className="w-full md:w-[70%]">
             <div 
-    className="overflow-hidden rounded-lg shadow-lg group bg-cover bg-center h-[500px] relative"
-                      
+              className="overflow-hidden rounded-lg shadow-lg group bg-cover bg-center min-h-[600px] md:h-[500px] relative"
+            
  style={{ backgroundImage: `url(${mission})` }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>

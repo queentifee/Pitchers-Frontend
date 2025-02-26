@@ -6,9 +6,8 @@ const WorkFlow = () => {
   return (
 <div className="mt-20">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-      Crafting Responsive and{" "}
-        <span className="bg-gradient-to-r from-green-500 to-green-800 text-transparent bg-clip-text">
-        Dynamic Websites.
+        <span className="bg-gradient-to-r from-orange-500 to-green-800 text-transparent bg-clip-text">
+        Crafting Responsive and Dynamic Websites.
         </span> 
         </h2>
         <div className="flex flex-wrap justify-center">
