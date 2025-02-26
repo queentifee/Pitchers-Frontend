@@ -77,10 +77,15 @@ className="py-2 px-3 border rounded-md"            >
               >
                 Create an account
               </a>
+              <Link to="/about"       
+             className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
+            >
+              About Us
+            </Link>
               <Link to ="/portfolio"
               className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
             >
-              View Portfolio
+               Portfolio
             </Link>
             </div>
           </div>
