@@ -7,6 +7,8 @@ import Mission from '../Mission';
 import Footer from '../Footer';
 import FeatureAbout from '../FeatureAbout';
 import ChooseUs from '../ChooseUs';
+import ContactForm from '../Form';
+import Pictures from '../Pictures';
 
 
 function AboutUs() {
@@ -20,10 +22,14 @@ function AboutUs() {
           <Mission/>
           <FeatureAbout/>
           <ChooseUs/>
+          <Pictures/>
+          </div>
+          <div className="bg-gradient-to-r from-green-800/40 via-black via-80% to-green-800/40 max-w-7xl mx-auto pt-10 px-6 mt-20">
+
+          <ContactForm/>
          <Footer/>
 
-
-          </div>
+</div>
 </>
           )}
 

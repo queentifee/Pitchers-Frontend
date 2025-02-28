@@ -3,7 +3,7 @@ import Heroo from "../assets/Heroo.jpg";
 
 const HeroPortfolio = () => {
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-[60vh] md:h-screen w-full">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-2000"

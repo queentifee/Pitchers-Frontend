@@ -21,16 +21,16 @@ export const navItems = [
 
 export const testimonials = [
   {
+    user: "Ronee Brown",
+    company: "Fusion Dynamics",
+    image: user4,
+    text: "Working with the team was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise!",
+  },
+  {
     user: "John Doe",
     company: "Stellar Solutions",
     image: user1,
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
-  },
-  {
-    user: "Jane Smith",
-    company: "Blue Horizon Technologies",
-    image: user2,
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations. I would highly recommend them to anyone looking for top-notch service.",
   },
   {
     user: "David Johnson",
@@ -39,11 +39,12 @@ export const testimonials = [
     text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
   },
   {
-    user: "Ronee Brown",
-    company: "Fusion Dynamics",
-    image: user4,
-    text: "Working with the team was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    user: "Jane Smith",
+    company: "Blue Horizon Technologies",
+    image: user2,
+    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life. It was awesome working with Pitchers!",
   },
+  
   {
     user: "Michael Wilson",
     company: "Visionary Creations",
