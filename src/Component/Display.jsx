@@ -2,7 +2,7 @@
 function DisplaySection () {
     return (
         
-<div className="container mx-auto px-6 lg:px-20 py-10">
+<div className="container mx-auto px-7 lg:px-20 py-10">
 {/* Title */}
 <h2 className="bebas-neue-goals text-left my-2 text-2xl font-bold text-white">
 PORTFOLIO</h2>

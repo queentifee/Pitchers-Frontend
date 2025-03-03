@@ -7,7 +7,7 @@ import DisplaySec from '../DisplaySec';
 import FlexDisplay from '../FlexDisplay';
 import Carousel from '../Carousel';
 import Footer from '../Footer';
-// import Pictures from '../Pictures';
+import Pictures from '../Pictures';
 import ContactForm from '../Form';
 
 function Portfolio() {
@@ -22,7 +22,7 @@ function Portfolio() {
           <DisplaySec/>
 
           <Carousel/>
-          {/* <Pictures/> */}
+          <Pictures/>
 </div>
 <div className="bg-gradient-to-r from-green-800/40 via-black via-80% to-green-800/40 max-w-7xl mx-auto pt-10 px-6 mt-20">
 
