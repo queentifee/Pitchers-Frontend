@@ -31,10 +31,10 @@ const Navbar = () => {
            <Link to="/" className="py-2 px-3 border rounded-md">
               Home
             </Link>
-            <Link to="/" className="py-2 px-3 border rounded-md">
+            <Link to="/login" className="py-2 px-3 border rounded-md">
               Log In
             </Link>
-            <Link to ="/"
+            <Link to ="/create-account"
 className="py-2 px-3 border rounded-md"            >
               Create account
             </Link>

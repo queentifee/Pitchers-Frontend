@@ -46,58 +46,68 @@ if (response.ok){
   return (
    
     
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
-        <h2 className="text-2xl font-semibold text-center">Create Account</h2>
+   <div className="md:w-[40%] mx-10 md:mx-auto md:py-10 ">
+       <div className="text-center mt-20 xl:mt-0 text-primary font-extrabold xl:text-5xl text-2xl py-10">
+             
+             <span className="bg-gradient-to-r from-orange-500 to-green-800 text-transparent bg-clip-text">
+               Create an Account
+             </span>
+           </div>
+       
+       {/* <div className="hidden md:block absolute md:top-[-13.6rem] md:right-[1rem] xl:top-[-12.5rem] xl:right-[-38.5rem]">
+         <img src={logo} alt="" />
+       </div> */}
+       <div className="bg-white flex flex-col justify-center items-start mx-auto py-6">      
+       
         <Formik
          initialValues={{ email: '', password: ''} }
          onSubmit={handleSubmit}>
           {({ handleSubmit }) => (
-            <form className="space-y-4" onSubmit= {handleSubmit}> 
-              <div>
-              <label className="block text-sm font-medium">Email</label>
-              <Field
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            className="w-full p-2 border rounded"
-          />
-          <ErrorMessage
-          name="email"
-          component="div"
-          className="text-red-500 text-sm"
-/>
-</div>
-              <div>
-                <label className="block text-sm font-medium">Password</label>
-                <Field
-                  type="password"
-                  name="password"
-                  className="w-full p-2 border rounded"
-                  placeholder="Enter your password"
-                />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
-              </div>
+<Form className="w-full space-y-4">
+       <div className="xl:py-16 p-4 pt-[2.2rem] xl:p-10 xl:pl-[5rem] xl:pr-40 xl:w-auto w-full m-auto xl:space-y-8 space-y-4 pb-2 xl:pb-6">
+         <div className="text-green-600 text-start font-bold xl:text-[32px] text-xl">
+           Login
+           </div>
+                <div className="xl:w-[120%] flex flex-col space-y-2">
+                  <label htmlFor="email" className="text-sm font-normal text-green-700">
+                    Email Address
+                  </label>
+                  <Field
+                    name="email"
+                    type="email"
+                    placeholder="Enter Email Address"
+                    className="w-full h-[3.4rem] bg-green-800 border border-[#9ca3af] outline-none font-light text-base text-gray rounded-[5px] py-2 px-[10px]"
+                  />
+                  <ErrorMessage name="email" component="span" className="text-[#db3a3a]" />
+                </div>
+                <div className="xl:w-[120%] flex flex-col space-y-2 relative">
+                  <label htmlFor="password" className="text-sm font-normal text-green-700">
+                    Password
+                  </label>
+                  <Field
+                    name="password"
+                    type='text'
+                    placeholder="Enter Password"
+                    className="w-full h-[3.4rem] bg-green-800 border border-[#9ca3af] outline-none font-light text-base text-gray rounded-[5px] py-2 px-[10px]"
+                  />
+                  <ErrorMessage name="password" component="span" className="text-[#db3a3a]" />
               {apiError && (
                 <div className="text-red-500 text-sm">{apiError}</div>
               )}
               {message && (
                 <div className="text-green-500 text-sm">{message}</div>
               )}
-              <button
+                <button              className="mt-10 inline-block rounded-full item-center justify-center bg-green-600 px-6 py-3 text-black font-semibold hover:bg-orange-600 transition"
                 type="submit"
-                className="w-full py-2 mt-4 bg-green-600 text-white rounded hover:bg-green-700"
               >
                 {loading ? 'Saving...' : 'Sign Up'}
               </button>
-            </form>
+              </div>
+              </div>
+            </Form>
           )}
         </Formik>
-        <p className="text-center">
+        <p className="text-center text-green-700">
           Already have an account?{' '}
           <a href="/login" className="text-blue-500">
             Log In
@@ -105,6 +115,8 @@ if (response.ok){
         </p>
       </div>
     </div>
+
+    
         );
 }
 
