@@ -4,9 +4,7 @@ import { React, useState}  from "react";
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { useNavigate , Link} from 'react-router-dom';
 import logo from '../../assets/logo.png'
-
-
-
+import { GoogleLogin } from '@react-oauth/google';
 
 const LoginPage = () => {
 
@@ -25,7 +23,7 @@ const LoginPage = () => {
 
   
 const requestData = {
-  email: values.email,
+  phoneNumber: values.phoneNumber,
   password: values.password
 };
 
@@ -67,6 +65,27 @@ try {
 }
 }
 
+const handleGoogleSuccess = (credentialResponse) => {
+    console.log("Google login successful:", credentialResponse);
+const token = credentialResponse.credential
+    // Send ID token to backend
+    fetch('http://localhost:4000/api/v1/auth/google-auth', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("Server response:", data);
+        navigate('/portfolio');
+
+        // Save token or redirect user, etc.
+      })
+      .catch(err => console.error(err));
+  };
+
   return (
     
     <div className="md:w-[40%] mx-10 md:mx-auto md:py-10 ">
@@ -82,7 +101,7 @@ try {
     </div>
     <div className="bg-white flex flex-col justify-center items-start mx-auto py-6">      
     <Formik
-    initialValues={{email: '', password: ''}}
+    initialValues={{phoneNumber: '', password: ''}}
     onSubmit={handleSubmit}>
     {() => (
        <Form className="w-full space-y-4">
@@ -90,17 +109,18 @@ try {
          <div className="text-green-600 text-start font-bold xl:text-[32px] text-xl">
            Login
            </div>
+           
                 <div className="xl:w-[120%] flex flex-col space-y-2">
                   <label htmlFor="email" className="text-sm font-normal text-green-700">
                     Email Address
                   </label>
                   <Field
-                    name="email"
-                    type="email"
-                    placeholder="Enter Email Address"
+                    name="phoneNumber"
+                    type="tel"
+                    placeholder="Enter Phone Number"
                     className="w-full h-[3.4rem] bg-green-800 border border-[#9ca3af] outline-none font-light text-base text-gray rounded-[5px] py-2 px-[10px]"
                   />
-                  <ErrorMessage name="email" component="span" className="text-[#db3a3a]" />
+                  <ErrorMessage name="phoneNumber" component="span" className="text-[#db3a3a]" />
                 </div>
                 <div className="xl:w-[120%] flex flex-col space-y-2 relative">
                   <label htmlFor="password" className="text-sm font-normal text-green-700">
@@ -145,6 +165,13 @@ try {
           )}
         </Formik>
       </div>
+      <p>Or log in with Google:</p>
+      <GoogleLogin
+        onSuccess={handleGoogleSuccess}
+        onError={() => {
+          console.log('Google login failed');
+        }}
+      />
       </div>
     
   );

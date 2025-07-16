@@ -1,6 +1,10 @@
 // CreateAccountPage.js
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import  { React, useState} from "react";
+import { useNavigate , Link} from 'react-router-dom';
+
+import { GoogleLogin } from '@react-oauth/google';
+
 
 
 
@@ -8,6 +12,7 @@ function CreateAccountPage() {
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState('');
   const [message, setMessage] = useState ('');
+  const navigate = useNavigate()
 
 
   const handleSubmit = async (values) => {
@@ -40,9 +45,28 @@ if (response.ok){
     setLoading(false);
   }
     };
-  
+
+    //sign up with google
     
+    const handleGoogleSuccess = (credentialResponse) => {
+      console.log("Google login successful:", credentialResponse);
+  const token = credentialResponse.credential
+      // Send ID token to backend
+      fetch('http://localhost:4000/api/v1/auth/google-auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token }),
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log("Server response:", data);
   
+          // Save token or redirect user, etc.
+        })
+        .catch(err => console.error(err));
+    };
   return (
    
     
@@ -114,6 +138,13 @@ if (response.ok){
           </a>
         </p>
       </div>
+      <p>Or sign up with Google:</p>
+      <GoogleLogin
+        onSuccess={handleGoogleSuccess}
+        onError={() => {
+          console.log('Google login failed');
+        }}
+      />
     </div>
 
     
