@@ -28,7 +28,7 @@ const requestData = {
 };
 
 try {
-  const response = await fetch(import.meta.env.VITE_LOGIN_ENDPOINT, {
+  const response = await fetch('https://167.71.131.143:3000/api/v1/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
