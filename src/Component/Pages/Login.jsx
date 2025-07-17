@@ -17,53 +17,52 @@ const LoginPage = () => {
   const handleShowPassword = () => {
     setShowPassword(true);
   };
-  const handleSubmit = async (values) => {
-    setIsLoading (true);
-    setErrorMessage('');
+//   const handleSubmit = async (values) => {
+//     setIsLoading (true);
+//     setErrorMessage('');
 
   
-const requestData = {
-  phoneNumber: values.phoneNumber,
-  password: values.password
-};
+// const requestData = {
+//   phoneNumber: values.phoneNumber,
+//   password: values.password
+// };
 
-try {
-  const response = await fetch('https://167.71.131.143:3000/api/v1/auth/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(requestData),
-  });
+// try {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(requestData),
+//   });
 
-  const result = await response.json();
+//   const result = await response.json();
 
-  if (response.ok) {
-    const token = result?.token;
+//   if (response.ok) {
+//     const token = result?.token;
 
-    if (token) {
-      // setAuthToken(token);
-      // dispatch(setToken(token));
-      // const decodedString = decodeJWT(token);
-      // setuserDetails(decodedString);
-      localStorage.setItem('authToken', token);
-      navigate('/portfolio');
+//     if (token) {
+//       // setAuthToken(token);
+//       // dispatch(setToken(token));
+//       // const decodedString = decodeJWT(token);
+//       // setuserDetails(decodedString);
+//       localStorage.setItem('authToken', token);
+//       navigate('/portfolio');
 
-    } else {
-      setErrorMessage('Login failed: Invalid token structure');
-    }
-  } else {
-    const message = result.message;
+//     } else {
+//       setErrorMessage('Login failed: Invalid token structure');
+//     }
+//   } else {
+//     const message = result.message;
 
-    setErrorMessage(`Failed to log in: ${message}`);
-  }
-} catch (error) {
-  setErrorMessage(`Error logging in: ${error.message}`);
-} finally {
-  setIsLoading(false);
-  // dispatch(hideLoading()); // Hide Loader
-}
-}
+//     setErrorMessage(`Failed to log in: ${message}`);
+//   }
+// } catch (error) {
+//   setErrorMessage(`Error logging in: ${error.message}`);
+// } finally {
+//   setIsLoading(false);
+//   // dispatch(hideLoading()); // Hide Loader
+// }
+// }
 
 const handleGoogleSuccess = (credentialResponse) => {
     console.log("Google login successful:", credentialResponse);

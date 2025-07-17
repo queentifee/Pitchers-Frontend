@@ -31,13 +31,13 @@ const Navbar = () => {
            <Link to="/" className="py-2 px-3 border rounded-md">
               Home
             </Link>
-            <Link to="/login" className="py-2 px-3 border rounded-md">
+            {/* <Link to="/login" className="py-2 px-3 border rounded-md">
               Log In
             </Link>
             <Link to ="/create-account"
 className="py-2 px-3 border rounded-md"            >
               Create account
-            </Link>
+            </Link> */}
             <Link to="/about"       
              className="bg-gradient-to-r from-green-500 to-orange-800 py-2 px-3 rounded-md"
             >
@@ -64,7 +64,7 @@ className="py-2 px-3 border rounded-md"            >
         Home
       </Link>
       
-      <a href="#" className="py-3 px-6 text-white text-lg border rounded-md">
+      {/* <a href="#" className="py-3 px-6 text-white text-lg border rounded-md">
         Log In
       </a>
 
@@ -73,7 +73,7 @@ className="py-2 px-3 border rounded-md"            >
         className="py-3 px-6 text-lg font-semibold rounded-md bg-gradient-to-r from-green-500 to-orange-800 text-white"
       >
         Create an Account
-      </a>
+      </a> */}
 
       <Link
         to="/about"

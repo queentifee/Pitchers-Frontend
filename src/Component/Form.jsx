@@ -55,7 +55,7 @@ setTimeout(() => {
 
   return (
     // <div className="w-full px-0 lg:px-8 py-10 h-full" >
-    <div className="container mx-auto px-5 lg:px0 py-5">
+    <div id="contact" className="container mx-auto px-5 lg:px0 py-5">
 
 <div className="flex flex-wrap  mt-5">
         
